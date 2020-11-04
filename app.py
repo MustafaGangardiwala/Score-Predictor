@@ -1,6 +1,4 @@
-# core
 import streamlit as st
-
 import pandas as pd 
 import numpy as np
 import pickle as pkl
@@ -14,9 +12,14 @@ pickle_in.close()
 
 def main():
 
-    st.beta_set_page_config(page_title='Score Predictor',  layout = 'centered', initial_sidebar_state = 'auto')
+    st.set_page_config(page_title='Score Predictor',  layout = 'centered', initial_sidebar_state = 'auto')
+    html_temp = """
+    <div style="background-color:#f63366 ;padding:10px">
+    <h2 style="color:white;text-align:center;">Score Predictor</h2>
+    </div>
+    """
+    st.markdown(html_temp, unsafe_allow_html=True)
     
-    st.title("Score Prediction")
     st.text("This application predicts the score(1-100) of student based on number of hours they study")
     st.text("Using Streamlit")
 
