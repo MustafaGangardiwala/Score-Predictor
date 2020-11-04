@@ -28,7 +28,6 @@ def main():
 
     if st.checkbox('Show Dataset'):
         st.header('Dataset')
-        st.write(url)
         st.table(df)
 
     if st.checkbox('Show Scatter Plot'):
