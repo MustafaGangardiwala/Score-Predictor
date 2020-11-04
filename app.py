@@ -34,8 +34,8 @@ def main():
         st.header('Scatter Plot')
         st.altair_chart(alt.Chart(df).mark_circle(size=25).encode(x='Hours', y='Scores'))
 
-    st.header('ADD HOURS OF STUDY BELOW')
-    hours = st.slider("ENTER HOURS",0.0,10.0,9.25,.25)
+    st.header('Add number of hours/day of studying')
+    hours = st.slider("Enter Hours/Day",0.0,10.0,9.25,.25)
 
     st.success("PREDICTED SCORE OF THE STUDENT: {}".format(regressor.predict([[hours]])))
 
