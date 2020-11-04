@@ -35,11 +35,18 @@ def main():
         st.header('Scatter Plot')
         st.altair_chart(alt.Chart(df).mark_circle(size=25).encode(x='Hours', y='Scores'))
 
-
     st.header('ADD HOURS OF STUDY BELOW')
     hours = st.slider("ENTER HOURS",0.0,10.0,9.25,.25)
 
     st.success("PREDICTED SCORE OF THE STUDENT: {}".format(regressor.predict([[hours]])))
+
+    st.info("""\
+          
+        By: [LinkedIn](https://www.linkedin.com/in/mustafa-gangardiwala/) |
+         [Gmail](mailto:gangardiwalam.mg@gmail.com) |
+         Source: [GitHub](https://github.com/MustafaGangardiwala/Score-Predictor)
+        | Data Source: [GitHub](https://raw.githubusercontent.com/AdiPersonalWorks/Random/master/student_scores%20-%20student_scores.csv). 
+    """)
    
 if __name__ == "__main__":
     main()
